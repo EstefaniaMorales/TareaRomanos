@@ -74,5 +74,27 @@ public class ConversionTest {
 		assertTrue(26==resultado);
 	
 	}
+	@Test
+	public void convertirDIII() {
+		Conversion conversion= new Conversion();
+		int resultado=conversion.convertir("DIII");
+		assertTrue(503==resultado);
+	
+	}
+	@Test
+	public void convertirDXLVIII() {
+		Conversion conversion= new Conversion();
+		int resultado=conversion.convertir("DXLVIII");
+		assertTrue(548==resultado);
+	
+	}
+	@Test//VALIDAR LETRAS QUE NO SE DEBEN REPETIR SEGUIDAMENTE
+	public void convertirDD() {
+		Conversion conversion= new Conversion();
+		int resultado=conversion.convertir("DD");
+		assertTrue(-1==resultado);
+	
+	}
+	
 
 }

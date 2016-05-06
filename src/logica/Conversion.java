@@ -5,7 +5,7 @@ public class Conversion {
 	boolean digitoRepetible=false;
 	boolean digitoFueRestado=false;
 	int digitoARestar=0;
-	
+	String strResultado="";
 	
 	
 	public int convertir(String romano){
@@ -38,6 +38,10 @@ public class Conversion {
 				
 				
 			}else if(digitoAnterior == digitoEntero && contadorRepeticion <=3){
+				if (digitoRepetible==false || digitoFueRestado==true){
+					return -1;//si el romano es invalido
+				}
+				
 				digitoAnterior = digitoEntero;
 				temp += digitoEntero;
 				digAntRepetible=digitoRepetible;
@@ -93,11 +97,13 @@ public class Conversion {
 				digitoRepetible=true;
 				break;
 				
-						
+			default:
+				return -1;//Si se ingresa un caracter invalido
 		}
 		return enteroDigito;
 	}
 
 }
+	
 
 
