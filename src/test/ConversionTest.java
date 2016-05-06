@@ -23,5 +23,12 @@ public class ConversionTest {
 	
 	}
 	
+	@Test
+	public void convertirV() {
+		Conversion conversion= new Conversion();
+		int resultado=conversion.convertirI("V");
+		assertTrue(5==resultado);
+	
+	}
 
 }

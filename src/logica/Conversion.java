@@ -8,6 +8,8 @@ public class Conversion {
 			
 		}else if(romano.equalsIgnoreCase("II")){
 			return 2;
+		}else if(romano.equalsIgnoreCase("V")){
+			return 5;
 		}
 		
 		return 0;
