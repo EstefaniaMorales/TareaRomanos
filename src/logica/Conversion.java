@@ -6,6 +6,8 @@ public class Conversion {
 		if (romano.equalsIgnoreCase("I")){
 			return 1;
 			
+		}else if(romano.equalsIgnoreCase("II")){
+			return 2;
 		}
 		
 		return 0;

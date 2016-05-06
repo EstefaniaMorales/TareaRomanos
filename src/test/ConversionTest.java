@@ -9,11 +9,19 @@ import logica.Conversion;
 public class ConversionTest {
 
 	@Test
-	public void test() {
+	public void convertirI() {
 		Conversion conversion= new Conversion();
 		int resultado=conversion.convertirI("I");
 		assertTrue(1==resultado);
 	
 	}
+	@Test
+	public void convertirII() {
+		Conversion conversion= new Conversion();
+		int resultado=conversion.convertirI("II");
+		assertTrue(2==resultado);
+	
+	}
+	
 
 }
