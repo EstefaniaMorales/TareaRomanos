@@ -28,18 +28,23 @@ public class Conversion {
 				digAntRepetible=digitoRepetible;
 				digitoFueRestado=false;
 			
-			}else if(digitoAnterior< digitoEntero && contadorRepeticion<=3){
+			}else if(digitoAnterior< digitoEntero){
 				
 			
 				digitoARestar= digitoAnterior;
-				System.out.println(""+digitoARestar);
 				digitoAnterior=digitoEntero;
 				temp=digitoEntero -digitoARestar;
 				contadorRepeticion=0;
+				digAntRepetible=digitoRepetible;		
+			}else if(digitoAnterior == digitoEntero && contadorRepeticion <=3){
+				digitoAnterior = digitoEntero;
+				temp += digitoEntero;
 				digAntRepetible=digitoRepetible;
-		
+				contadorRepeticion++;
+				digitoFueRestado=false;
 				
-			}	
+				
+			}
 		}
 		resultado += temp; 
 		return resultado;
@@ -58,6 +63,24 @@ public class Conversion {
 				break;
 			case 'X':
 				enteroDigito=10;
+				digitoRepetible=true;
+				break;
+			case 'L':
+				enteroDigito=50;
+				break;
+			case 'C':
+				enteroDigito=100;
+				digitoRepetible=true;
+				break;
+			case 'D':
+				enteroDigito=500;
+				
+				break;
+			case 'M':
+				enteroDigito=1000;
+				digitoRepetible=true;
+				break;
+				
 						
 		}
 		return enteroDigito;

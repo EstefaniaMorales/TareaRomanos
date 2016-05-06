@@ -46,5 +46,12 @@ public class ConversionTest {
 		assertTrue(10==resultado);
 	
 	}
+	@Test
+	public void convertirXX() {
+		Conversion conversion= new Conversion();
+		int resultado=conversion.convertir("XX");
+		assertTrue(20==resultado);
+	
+	}
 
 }
