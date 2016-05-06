@@ -15,14 +15,14 @@ public class ConversionTest {
 		assertTrue(1==resultado);
 	
 	}
-	/*
+	
 	@Test
 	public void convertirII() {
 		Conversion conversion= new Conversion();
 		int resultado=conversion.convertir("II");
 		assertTrue(2==resultado);
 	
-	}*/
+	}
 	
 	@Test
 	public void convertirV() {
@@ -51,6 +51,27 @@ public class ConversionTest {
 		Conversion conversion= new Conversion();
 		int resultado=conversion.convertir("XX");
 		assertTrue(20==resultado);
+	
+	}
+	@Test
+	public void convertirXXI() {
+		Conversion conversion= new Conversion();
+		int resultado=conversion.convertir("XXI");
+		assertTrue(21==resultado);
+	
+	}
+	@Test
+	public void convertirXXIII() {
+		Conversion conversion= new Conversion();
+		int resultado=conversion.convertir("XXIII");
+		assertTrue(23==resultado);
+	
+	}
+	@Test
+	public void convertirXXVI() {
+		Conversion conversion= new Conversion();
+		int resultado=conversion.convertir("XXVI");
+		assertTrue(26==resultado);
 	
 	}
 

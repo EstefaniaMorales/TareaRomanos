@@ -15,6 +15,7 @@ public class Conversion {
 		int contadorRepeticion=0;
 		boolean digAntRepetible=false;
 		int resultado=0;
+		int digitoMayor=0;
 		
 		//recorrer el string romano
 		for(Character digito: romano.toCharArray()){
@@ -29,13 +30,13 @@ public class Conversion {
 				digitoFueRestado=false;
 			
 			}else if(digitoAnterior< digitoEntero){
-				
-			
 				digitoARestar= digitoAnterior;
 				digitoAnterior=digitoEntero;
-				temp=digitoEntero -digitoARestar;
+				temp=digitoEntero -temp;
 				contadorRepeticion=0;
-				digAntRepetible=digitoRepetible;		
+				digAntRepetible=digitoRepetible;	
+				
+				
 			}else if(digitoAnterior == digitoEntero && contadorRepeticion <=3){
 				digitoAnterior = digitoEntero;
 				temp += digitoEntero;
@@ -44,7 +45,18 @@ public class Conversion {
 				digitoFueRestado=false;
 				
 				
+			}else if (digitoAnterior > digitoEntero){
+				digitoMayor=digitoAnterior;
+				digitoAnterior = digitoEntero;				
+				digAntRepetible=digitoRepetible;
+				contadorRepeticion=0;				
+				resultado += temp;				
+				temp = digitoEntero;
+				digitoFueRestado=false;
+				
+				
 			}
+			
 		}
 		resultado += temp; 
 		return resultado;
