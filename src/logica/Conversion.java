@@ -30,6 +30,19 @@ public class Conversion {
 				digitoFueRestado=false;
 			
 			}else if(digitoAnterior< digitoEntero){
+				//validar numero romanos de 1 a 10
+				if(digitoAnterior!=1 && digitoEntero==10){
+					return -1;
+				}
+				//validar numero romanos de 10 a 1000
+				if((digitoAnterior!=10 && digitoEntero==50)||(digitoAnterior!=10 && digitoEntero==100)){
+					return -1;
+				}
+				
+				//validar numero romanos de 10 a 10
+				if(digitoAnterior!=100 && digitoEntero==1000){
+					return -1;
+				}
 				digitoARestar= digitoAnterior;
 				digitoAnterior=digitoEntero;
 				temp=digitoEntero -temp;
@@ -50,6 +63,8 @@ public class Conversion {
 				
 				
 			}else if (digitoAnterior > digitoEntero){
+				
+				
 				digitoMayor=digitoAnterior;
 				digitoAnterior = digitoEntero;				
 				digAntRepetible=digitoRepetible;
@@ -57,6 +72,7 @@ public class Conversion {
 				resultado += temp;				
 				temp = digitoEntero;
 				digitoFueRestado=false;
+				
 				
 				
 			}

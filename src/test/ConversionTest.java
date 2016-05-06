@@ -95,6 +95,26 @@ public class ConversionTest {
 		assertTrue(-1==resultado);
 	
 	}
+	@Test
+	public void convertirIVX() {
+		Conversion conversion= new Conversion();
+		int resultado=conversion.convertir("IVX");
+		assertTrue(-1==resultado);
 	
+	}
+	@Test
+	public void convertirIL() {
+		Conversion conversion= new Conversion();
+		int resultado=conversion.convertir("IL");
+		assertTrue(-1==resultado);
+	
+	}
+	@Test//validar que el numero ingresado sea correcto
+	public void convertirLM() {
+		Conversion conversion= new Conversion();
+		int resultado=conversion.convertir("LM");
+		assertTrue(-1==resultado);
+	
+	}
 
 }
