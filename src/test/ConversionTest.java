@@ -11,23 +11,32 @@ public class ConversionTest {
 	@Test
 	public void convertirI() {
 		Conversion conversion= new Conversion();
-		int resultado=conversion.convertirI("I");
+		int resultado=conversion.convertir("I");
 		assertTrue(1==resultado);
 	
 	}
+	/*
 	@Test
 	public void convertirII() {
 		Conversion conversion= new Conversion();
-		int resultado=conversion.convertirI("II");
+		int resultado=conversion.convertir("II");
 		assertTrue(2==resultado);
 	
-	}
+	}*/
 	
 	@Test
 	public void convertirV() {
 		Conversion conversion= new Conversion();
-		int resultado=conversion.convertirI("V");
+		int resultado=conversion.convertir("V");
 		assertTrue(5==resultado);
+	}
+	
+	
+	@Test
+	public void convertirIV() {
+		Conversion conversion= new Conversion();
+		int resultado=conversion.convertir("IV");
+		assertTrue(4==resultado);
 	
 	}
 
