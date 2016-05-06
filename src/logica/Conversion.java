@@ -39,10 +39,7 @@ public class Conversion {
 				digAntRepetible=digitoRepetible;
 		
 				
-			}
-			
-			
-	
+			}	
 		}
 		resultado += temp; 
 		return resultado;
@@ -59,6 +56,8 @@ public class Conversion {
 			case 'V':
 				enteroDigito=5;
 				break;
+			case 'X':
+				enteroDigito=10;
 						
 		}
 		return enteroDigito;

@@ -39,5 +39,12 @@ public class ConversionTest {
 		assertTrue(4==resultado);
 	
 	}
+	@Test
+	public void convertirX() {
+		Conversion conversion= new Conversion();
+		int resultado=conversion.convertir("X");
+		assertTrue(10==resultado);
+	
+	}
 
 }
